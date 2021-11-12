@@ -1,0 +1,175 @@
+/* Your styles go here */
+/* TODO: Example 02 (Activity 3) CSS goes here */
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+nav {
+  padding: .5rem;
+  border-bottom: 1px solid lightgray;
+}
+
+nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav > ul  > li {
+  margin: 0;
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.clearfix2 {
+  overflow: auto;
+}
+
+.clearfix3 {
+  display: flow-root;
+}
+
+/* Styling links */
+nav a:link, nav a:visited, nav a:active {
+  text-decoration: none;
+  color: coral;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: orange;
+}
+
+footer {
+  margin: 2rem .5rem;
+  padding: .5rem;
+  border-top: 1px solid lightgray;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  counter-reset: article;
+}
+
+/* Styling images */
+
+img {
+  max-width: 500px;
+  width: 50%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: .75rem;
+}
+
+/* Styling articles */
+article > h1::before {
+  counter-increment: article;
+  content: "Article " counter(article) ": ";
+  color: lightcoral;
+}
+
+/* Centering text vertically */
+.circle {
+  float: left;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: .5rem;
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.vcenter1 {
+  line-height: 200px;
+}
+
+.vcenter2 > .circle::after{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.vcenter3 > .circle {
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.vcenter4 > div {
+  line-height: 200px;
+  margin: 0 calc((100% - 800px) / 8);
+}
+
+
+/* Equal-height columns*/
+.column {
+  float:left;
+  padding: 10px;
+  color: white;
+}
+
+.left-col {
+  background-color: darkgray;
+  width: 25%;
+  padding: 10px;
+}
+
+.middle-col {
+  background-color: black;
+  width: 50%;
+  padding: 10px;
+}
+
+.right-col {
+  background-color: darkgray;
+  width: 25%;
+  padding: 10px;
+}
+
+.equal-height1 {
+  display: table;
+}
+
+.equal-height1 .column {
+  float: none;
+  display: table-cell;
+}
+
+.equal-height2 {
+  overflow: hidden;
+}
+
+.equal-height2 .column {
+  padding-bottom: 999999px;
+  margin-bottom: -999999px;
+}
+
+/* Multi-column text */
+.multi-column {
+  columns: 3;
+  column-gap: 2rem;
+}
